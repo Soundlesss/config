@@ -1,33 +1,32 @@
 proxies:
   - name: "VM" # 节点名称，自定义
-    type: vmess
-    server: sg.hangzzz.top # 你的域名
-    port: 9443 # V2Ray服务器监听端口
-    uuid: 8858a507-56a4-4cd5-ad60-9a389fad6b6e # 替换为服务器config.json中的UUID
-    alterId: 0
-    cipher: auto
-    udp: true
+
+  - name: "SG-REALITY🇸🇬"
+    type: vless
+    server: sg.hangzzz.top
+    port: 443
+    uuid: 8858a507-56a4-4cd5-ad60-9a389fad6b6e  # xray uuid 生成的uuid
+    servername: www.tesla.com
+    flow: xtls-rprx-vision
     tls: true
-    skip-cert-verify: false # 强烈建议保持false验证证书
-    network: ws
-    ws-opts:
-      path: "/vmess" # 替换为服务器config.json中的ws路径
-      headers:
-        Host: sg.hangzzz.top # 你的域名，用于SNI
-  
-  - name: "SS"
+    udp: true
+    reality-opts:
+      public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8 # xray x25519 生成的公钥
+    client-fingerprint: chrome
+    
+  - name: "SG-SS🇸🇬"
     type: ss
     server: sg.hangzzz.top           # 你的域名或IP
     port: 28443
     cipher: chacha20-ietf-poly1305
-    password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="
+    password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
     udp: true                  # 支持UDP转发
 
-  - name: "REALITY"
+  - name: "HK-REALITY🇭🇰"
     type: vless
     server: sg.hangzzz.top
     port: 443
-    uuid: 8858a507-56a4-4cd5-ad60-9a389fad6b6e
+    uuid: 8858a507-56a4-4cd5-ad60-9a389fad6b6e  # xray uuid 生成的uuid
     servername: www.tesla.com
     flow: xtls-rprx-vision
     tls: true
@@ -36,12 +35,22 @@ proxies:
       public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8 # xray x25519 生成的公钥
     client-fingerprint: chrome
 
+  - name: "HK-SS🇭🇰"
+    type: ss
+    server: sg.hangzzz.top           # 你的域名或IP
+    port: 28443
+    cipher: chacha20-ietf-poly1305
+    password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
+    udp: true                  # 支持UDP转发
+
 proxy-groups:
   - name: "Hangself"
     type: select
     proxies:
-      - "REALITY"
-      - "SS"
+      - "SG-REALITY🇸🇬"
+      - "SG-SS🇸🇬"
+      - "HK-REALITY🇭🇰"
+      - "HK-SS🇭🇰"
 
 rules:
   - GEOIP,CN,DIRECT           # 国内直连
