@@ -61,10 +61,10 @@ proxy-groups:
   - name: "Hangself"
     type: select
     proxies:
-      - "SG-REALITY🇸🇬"
-      - "SG-SS🇸🇬"
-      - "HK-REALITY🇭🇰"
-      - "HK-SS🇭🇰"
+      - "🇸🇬 SG-REALITY"
+      - "🇸🇬 SG-SS"
+      - "🇭🇰 HK-REALITY"
+      - "🇭🇰 HK-SS"
 
 rules:
   - GEOIP,CN,DIRECT  # 国内直连
