@@ -1,5 +1,19 @@
 proxies:
-  - name: "VM" # 节点名称，自定义
+  - name: "VM"  # 节点名称，自定义
+    type: vmess
+    server: hangzzz.top
+    port: 9443
+    uuid: 1811b551-566e-4dc0-92d3-4c12aa7819f3
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: "/vmess"
+      headers:
+        Host: hangzzz.top
 
   - name: "SG-REALITY🇸🇬"
     type: vless
@@ -11,16 +25,16 @@ proxies:
     tls: true
     udp: true
     reality-opts:
-      public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8 # xray x25519 生成的公钥
+      public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8  # xray x25519 生成的公钥
     client-fingerprint: chrome
     
   - name: "SG-SS🇸🇬"
     type: ss
-    server: sg.hangzzz.top           # 你的域名或IP
+    server: sg.hangzzz.top  # 你的域名或IP
     port: 28443
     cipher: chacha20-ietf-poly1305
     password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
-    udp: true                  # 支持UDP转发
+    udp: true  # 支持UDP转发
 
   - name: "HK-REALITY🇭🇰"
     type: vless
@@ -32,16 +46,16 @@ proxies:
     tls: true
     udp: true
     reality-opts:
-      public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8 # xray x25519 生成的公钥
+      public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8  # xray x25519 生成的公钥
     client-fingerprint: chrome
 
   - name: "HK-SS🇭🇰"
     type: ss
-    server: hk.hangzzz.top           # 你的域名或IP
+    server: hk.hangzzz.top  # 你的域名或IP
     port: 28443
     cipher: chacha20-ietf-poly1305
     password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
-    udp: true                  # 支持UDP转发
+    udp: true  # 支持UDP转发
 
 proxy-groups:
   - name: "Hangself"
@@ -53,5 +67,5 @@ proxy-groups:
       - "HK-SS🇭🇰"
 
 rules:
-  - GEOIP,CN,DIRECT           # 国内直连
-  - MATCH,Hangself                # 其他走代理
+  - GEOIP,CN,DIRECT  # 国内直连
+  - MATCH,Hangself  # 其他走代理
