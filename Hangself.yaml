@@ -15,7 +15,7 @@ proxies:
       headers:
         Host: hangzzz.top
 
-  - name: "SG-REALITY🇸🇬"
+  - name: "🇸🇬 SG-REALITY"
     type: vless
     server: sg.hangzzz.top
     port: 443
@@ -28,7 +28,7 @@ proxies:
       public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8  # xray x25519 生成的公钥
     client-fingerprint: chrome
     
-  - name: "SG-SS🇸🇬"
+  - name: "🇸🇬 SG-SS"
     type: ss
     server: sg.hangzzz.top  # 你的域名或IP
     port: 28443
@@ -36,7 +36,7 @@ proxies:
     password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
     udp: true  # 支持UDP转发
 
-  - name: "HK-REALITY🇭🇰"
+  - name: "🇭🇰 HK-REALITY"
     type: vless
     server: hk.hangzzz.top
     port: 443
@@ -49,7 +49,7 @@ proxies:
       public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8  # xray x25519 生成的公钥
     client-fingerprint: chrome
 
-  - name: "HK-SS🇭🇰"
+  - name: "🇭🇰 HK-SS"
     type: ss
     server: hk.hangzzz.top  # 你的域名或IP
     port: 28443
