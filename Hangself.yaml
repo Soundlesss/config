@@ -57,19 +57,6 @@ proxies:
     password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
     udp: true  # 支持UDP转发
 
-  - name: "🇺🇸 US弗吉尼亚-reality"
-    type: vless
-    server: us1.hangzzz.top
-    port: 443
-    uuid: 8858a507-56a4-4cd5-ad60-9a389fad6b6e  # xray uuid 生成的uuid
-    servername: www.tesla.com
-    flow: xtls-rprx-vision
-    tls: true
-    udp: true
-    reality-opts:
-      public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8  # xray x25519 生成的公钥
-    client-fingerprint: chrome
-
 proxy-groups:
   - name: "Hangself"
     type: select
@@ -78,7 +65,6 @@ proxy-groups:
       - "🇸🇬 SG-shadowsocks"
       - "🇺🇸 US-reality"
       - "🇺🇸 US-shadowsocks"
-      - "🇺🇸 US弗吉尼亚-reality"
 
 rules:
   - GEOIP,CN,DIRECT  # 国内直连
