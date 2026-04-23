@@ -57,7 +57,7 @@ proxies:
     password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
     udp: true  # 支持UDP转发
 
-  - name: "🇺🇸 US-reality"
+  - name: "🇺🇸 US硅谷-reality"
     type: vless
     server: us.hangzzz.top
     port: 443
@@ -70,7 +70,7 @@ proxies:
       public-key: PGTrTptrJVQF1Z2k5M1PanhLbXJRpUcG78pG694Dmy8  # xray x25519 生成的公钥
     client-fingerprint: chrome
 
-  - name: "🇺🇸 US-shadowsocks"
+  - name: "🇺🇸 US硅谷-shadowsocks"
     type: ss
     server: us.hangzzz.top  # 你的域名或IP
     port: 28443
@@ -86,8 +86,8 @@ proxy-groups:
       - "🇸🇬 SG-shadowsocks"
       - "🇭🇰 HK-reality"
       - "🇭🇰 HK-shadowsocks"
-      - "🇺🇸 US-reality"
-      - "🇺🇸 US-shadowsocks"
+      - "🇺🇸 US硅谷-reality"
+      - "🇺🇸 US硅谷-shadowsocks"
 
 rules:
   - GEOIP,CN,DIRECT  # 国内直连
