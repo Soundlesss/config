@@ -38,7 +38,7 @@ proxies:
 
   - name: "🇺🇸 US-reality"
     type: vless
-    server: hk.hangzzz.top
+    server: us.hangzzz.top
     port: 443
     uuid: 8858a507-56a4-4cd5-ad60-9a389fad6b6e  # xray uuid 生成的uuid
     servername: www.tesla.com
@@ -51,7 +51,7 @@ proxies:
 
   - name: "🇺🇸 US-shadowsocks"
     type: ss
-    server: hk.hangzzz.top  # 你的域名或IP
+    server: us.hangzzz.top  # 你的域名或IP
     port: 28443
     cipher: chacha20-ietf-poly1305
     password: "n0FpiK6Gp2c8U4qmt7Ws2U26DKg0eIGAavhRa8qrRzU="  # 自定义的strong password
